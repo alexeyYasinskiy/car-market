@@ -1,0 +1,12 @@
+$blue: #344483;
+$yellow: #ffc500;
+$grey: #a1a7b5;
+
+@mixin f400 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+@mixin f700 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}

@@ -1,9 +1,98 @@
-html{
-    box-sizing: border-box;
-}
-*,
-*::before,
-*::after{
-    box-sizing: inherit;
+@import 'vars';
+@import 'global';
+
+
+//start header
+
+.header{
+    @include f700
+    font-size: 18px;
+    &__inner{
+        display: flex;
+        justify-content: space-between; 
+        padding-top: 15px;
+    }
+    &__informaition{
+        display: flex;  
+    }
+    &__logo{
+        margin-top: -10px;
+        img{
+            width: 86px;
+            height: 70px;
+        }
+    }
+    &__tel{
+        color: $blue;
+        margin-bottom: 14px;
+        padding-left: 20px;
+        position: relative;
+        margin-left: 10px;
+        &::before{
+            content: '';
+            background-image: url(../images/icons/phone.png);
+            width: 16px;
+            height: 18px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }  
+    }
+    &__name{
+        text-transform: uppercase;
+        margin-left: 18px;
+    }
+    &__link{
+        margin-top: 10px;
+        a{
+            font-size: 14px;
+            padding: 7px 10px;
+            background-color: $yellow;
+            color: $blue;
+            margin-right: 15px;
+            border-radius: 50px;
+            &:hover{ 
+                background-color: $grey;
+                color: #000;
+            }
+        }
+    } 
+    &__menu{
+        margin-top: 15px;
+        &-list{
+            li{
+                display: inline-block;
+                margin-right: 20px;
+                a{
+                    color: $grey;
+                    &:hover{
+                        color: #000;
+                        text-decoration: 2px underline $grey;
+                    }
+                }
+            }
+        }
+    } 
+    &__basket{
+        &-cart{
+            position: relative;
+            img{
+                width: 31px;
+                height: 27px;
+            }
+            span{
+                padding: 4px 8px;
+                background-color: $yellow;
+                border-radius: 3px;
+                position: absolute;
+                right: 10px;
+                font-size: 14px; 
+            }
+        }
+    }
+    &__price{
+        font-size: 16px;
+    }
 }
 
+//end header
